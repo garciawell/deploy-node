@@ -23,6 +23,10 @@ routes.use(authMiddleware)
  * ADS
  */
 
+routes.get('/teste', (req, res) => {
+  return res.send('Hello World')
+})
+
 routes.get('/ads', handle(controllers.AdController.index))
 routes.get('/ads/:id', handle(controllers.AdController.show))
 routes.post(
